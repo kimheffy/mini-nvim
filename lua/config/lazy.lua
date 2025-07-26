@@ -1,3 +1,9 @@
+-- Set <space> as the leader key
+-- See `:help mapleader`
+--  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
+vim.g.mapleader = ' '
+vim.g.maplocalleader = '\\'
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -20,17 +26,24 @@ require 'config.options'
 -- Setup lazy.nvim
 require('lazy').setup {
   spec = {
+    {
+      'folke/tokyonight.nvim',
+      config = function()
+        vim.cmd.colorscheme 'tokyonight'
+      end,
+    },
     -- import your plugins
     { import = 'plugins' },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
-  -- install = { colorscheme = { "kanagawa" } },
+  -- install = { colorscheme = { 'kanagawa' } },
   -- automatically check for plugin updates
   checker = { enabled = true },
 }
 
 require 'config.keymaps'
+require 'config.terminal'
 
 -- after everything
 -- vim.cmd("ShowkeysToggle")

@@ -91,7 +91,7 @@ return {
         use_default_keymaps = true,
         view_options = {
           -- Show files and directories that start with "."
-          show_hidden = false,
+          show_hidden = true,
           -- This function defines what is considered a "hidden" file
           is_hidden_file = function(name, bufnr)
             local m = name:match '^%.'
@@ -212,6 +212,12 @@ return {
           border = 'rounded',
         },
       }
+
+      -- Open parent directory in current window
+      vim.keymap.set('n', '-', '<cmd>Oil<cr>', { desc = 'Open parent directory' })
+
+      -- Open parent directory in floating window
+      vim.keymap.set('n', '<leader>-', require('oil').toggle_float, { desc = 'Open Float parent directory' })
     end,
   },
 }
