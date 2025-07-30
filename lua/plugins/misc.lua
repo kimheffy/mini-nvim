@@ -8,14 +8,6 @@ return {
     'tpope/vim-sleuth',
   },
   {
-    -- powerful git integration for vim
-    'tpope/vim-fugitive',
-  },
-  {
-    -- github integration for vim-fugitive
-    'tpope/vim-rhubarb',
-  },
-  {
     -- diff open vim
     'sindrets/diffview.nvim',
   },
