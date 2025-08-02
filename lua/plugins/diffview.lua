@@ -4,6 +4,8 @@ local function get_default_branch_name()
   return res.code == 0 and 'main' or 'master'
 end
 
+-- keymaps inspired by https://www.naseraleisa.com/posts/diff#neovim-diffing-while-editing-code
+
 return {
   {
     -- diff open vim
