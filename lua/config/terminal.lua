@@ -21,3 +21,12 @@ vim.keymap.set('n', ',st', function()
   vim.wo.winfixheight = true
   vim.cmd.term()
 end)
+
+-- Open a terminal on a new tab
+vim.keymap.set('n', ',ft', function()
+  vim.cmd.new()
+  vim.cmd.wincmd 'T'
+  -- vim.api.nvim_win_set_height(0, 12)
+  vim.wo.winfixheight = true
+  vim.cmd.term()
+end)
