@@ -7,8 +7,4 @@ return {
     -- detect tabstop and shiftwidth automatically
     'tpope/vim-sleuth',
   },
-  {
-    -- diff open vim
-    'sindrets/diffview.nvim',
-  },
 }
