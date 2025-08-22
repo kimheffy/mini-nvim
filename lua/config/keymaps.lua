@@ -17,7 +17,7 @@ set('n', '<CR>', function()
   end
 end, { expr = true })
 
-set('n', '<leader>ex', '<cmd>source %<cr>', { desc = 'Execute the current file' })
+-- set('n', '<leader>ex', '<cmd>source %<cr>', { desc = 'Execute the current file' })
 
 -- TODO: See if i want this remapped to something
 -- Diagnostic keymaps
